@@ -1,0 +1,121 @@
+@import '../../styles/tokens';
+
+// Ensure all footer elements use Josefin Sans
+.footer,
+.content,
+.container,
+.social,
+.socialLink,
+.copyright,
+.credits,
+.heart {
+  font-family: var(--font-family-primary) !important;
+}
+
+.footer {
+  position: relative;
+  margin-top: auto;
+  background-color: var(--color-background-paper);
+  color: var(--color-text-secondary);
+}
+
+.wave {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  color: var(--color-background);
+}
+
+.waveSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: waveAnimation 20s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes waveAnimation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+}
+
+.content {
+  padding: $spacing-12 $spacing-6 $spacing-8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-6;
+  margin-bottom: $spacing-8;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-secondary);
+  transition: all var(--motion-duration-normal) var(--motion-easing-smooth);
+  border-radius: 50%;
+
+  &:hover {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.copyright {
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  margin-bottom: $spacing-2;
+  font-family: var(--font-family-primary) !important;
+}
+
+.credits {
+  font-size: 0.875rem;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-primary) !important;
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+

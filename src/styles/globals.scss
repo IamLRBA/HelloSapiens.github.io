@@ -1,0 +1,184 @@
+/**
+ * Global Styles
+ * 
+ * Imports fonts, design tokens, and base styles.
+ */
+
+// Import design tokens
+@import './tokens';
+
+// Font Face Declarations for Josefin Sans
+// Downloaded directly from Google Fonts: https://fonts.google.com/specimen/Josefin+Sans
+// Self-hosted fonts - no external downloads required
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/josefin-sans/JosefinSans-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/josefin-sans/JosefinSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/josefin-sans/JosefinSans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/josefin-sans/JosefinSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/josefin-sans/JosefinSans-Bold.woff2') format('woff2');
+}
+
+// Import reset
+@import './reset';
+
+// CSS Variables for Design Tokens
+:root {
+  // Colors
+  --color-primary: #4696e5;
+  --color-primary-light: #6ab0f0;
+  --color-primary-dark: #2d7bc4;
+  --color-secondary: #2c3e50;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-tertiary: #666666;
+  --color-background: #fefefe;
+  --color-background-paper: #fafafa;
+  --color-border: #e6e6e6;
+  
+  // Typography - Josefin Sans only (sans-serif as absolute last fallback)
+  --font-family-primary: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-size-base: 1rem;
+  
+  // Spacing
+  --spacing-unit: 0.25rem; // 4px base
+  
+  // Motion
+  --motion-duration-fast: 150ms;
+  --motion-duration-normal: 250ms;
+  --motion-duration-slow: 350ms;
+  --motion-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  // Z-index
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-modal: 1050;
+}
+
+// Base styles
+html {
+  scroll-behavior: smooth;
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+body {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+// Apply Josefin Sans to all text elements
+// Using universal selector with higher specificity to ensure font is applied everywhere
+// This must come after reset to override any default font settings
+*,
+*::before,
+*::after {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure all elements within body use Josefin Sans
+body *,
+body *::before,
+body *::after {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure headings use Josefin Sans with proper weights
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+  font-weight: 600;
+}
+
+// Ensure buttons and inputs use Josefin Sans
+button, input, textarea, select, option {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure all text elements explicitly use Josefin Sans
+p, span, div, a, li, td, th, label, small, strong, em, b, i, u, s, code, pre, blockquote, cite {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure navigation and footer text use Josefin Sans
+nav, footer, header, section, article, aside, main {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure form elements use Josefin Sans
+fieldset, legend {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure table elements use Josefin Sans
+table, thead, tbody, tfoot, tr, td, th {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Ensure list elements use Josefin Sans
+ul, ol, dl, dt, dd {
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+// Selection
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+// Focus styles
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+// Smooth scrolling with reduced motion support
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+

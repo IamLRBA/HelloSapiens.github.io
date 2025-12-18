@@ -1,0 +1,194 @@
+@import '../styles/tokens';
+
+// Ensure all elements in this page use Josefin Sans
+.hero,
+.heroContent,
+.heroTitle,
+.heroSubtitle,
+.heroButton,
+.services,
+.sectionTitle,
+.spotlights,
+.spotlight,
+.spotlightContent,
+.container {
+  font-family: var(--font-family-primary) !important;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-24 $spacing-6;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: $spacing-16;
+
+  @media (max-width: 968px) {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: $spacing-16 $spacing-6;
+  }
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: $spacing-4;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary) !important;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  margin-bottom: $spacing-8;
+  font-family: var(--font-family-primary) !important;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.heroButton {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  padding: $spacing-4 $spacing-8;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  font-family: var(--font-family-primary) !important;
+  transition: all var(--motion-duration-normal) var(--motion-easing-smooth);
+  box-shadow: var(--shadow-base);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.heroImage {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+
+  @media (max-width: 968px) {
+    max-width: 100%;
+    margin-top: $spacing-8;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.services {
+  padding: $spacing-24 $spacing-6;
+  background-color: var(--color-background-paper);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-family-primary) !important;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.spotlights {
+  padding: $spacing-24 $spacing-6;
+}
+
+.spotlight {
+  display: flex;
+  align-items: center;
+  gap: $spacing-12;
+  margin-bottom: $spacing-16;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 968px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.spotlightImage {
+  flex: 1;
+  max-width: 500px;
+
+  @media (max-width: 968px) {
+    max-width: 100%;
+  }
+}
+
+.spotlightContent {
+  flex: 1;
+  font-family: var(--font-family-primary) !important;
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: $spacing-4;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-primary) !important;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-primary) !important;
+
+    a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color var(--motion-duration-fast) var(--motion-easing);
+      font-family: var(--font-family-primary) !important;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+}
+
+

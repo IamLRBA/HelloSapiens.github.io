@@ -1,0 +1,194 @@
+@import '../../styles/tokens';
+
+// Ensure all elements use Josefin Sans
+.page,
+.hero,
+.title,
+.subtitle,
+.content,
+.contactGrid,
+.contactInfo,
+.contactForm,
+.formGroup,
+.infoItem,
+.submitButton,
+.container {
+  font-family: var(--font-family-primary) !important;
+}
+
+.page {
+  min-height: calc(100vh - 200px);
+}
+
+.hero {
+  padding: $spacing-24 $spacing-6 $spacing-16;
+  background-color: var(--color-background-paper);
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: $spacing-4;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  font-family: var(--font-family-primary) !important;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  font-family: var(--font-family-primary) !important;
+}
+
+.content {
+  padding: $spacing-24 $spacing-6;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: $spacing-16;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contactInfo {
+  font-family: var(--font-family-primary) !important;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: $spacing-4;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-primary) !important;
+  }
+
+  > p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: $spacing-8;
+    font-family: var(--font-family-primary) !important;
+  }
+}
+
+.infoItem {
+  margin-bottom: $spacing-6;
+  font-family: var(--font-family-primary) !important;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: $spacing-2;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    font-family: var(--font-family-primary) !important;
+  }
+
+  a,
+  p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-primary) !important;
+  }
+
+  a {
+    color: var(--color-primary);
+    transition: color var(--motion-duration-fast) var(--motion-easing);
+
+    &:hover {
+      color: var(--color-primary-dark);
+    }
+  }
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2;
+  font-family: var(--font-family-primary) !important;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-family-primary) !important;
+  }
+
+  input,
+  textarea {
+    padding: $spacing-4;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-family: var(--font-family-primary) !important;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    transition: all var(--motion-duration-fast) var(--motion-easing);
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(70, 150, 229, 0.1);
+    }
+
+    &::placeholder {
+      color: var(--color-text-tertiary);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+}
+
+.submitButton {
+  align-self: flex-start;
+  padding: $spacing-4 $spacing-8;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: var(--font-family-primary) !important;
+  cursor: pointer;
+  transition: all var(--motion-duration-normal) var(--motion-easing-smooth);
+  box-shadow: var(--shadow-base);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+

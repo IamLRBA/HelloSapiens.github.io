@@ -1,0 +1,90 @@
+@import '../../styles/tokens';
+
+// Ensure all elements use Josefin Sans
+.page,
+.hero,
+.title,
+.subtitle,
+.content,
+.serviceGrid,
+.serviceCard,
+.container {
+  font-family: var(--font-family-primary) !important;
+}
+
+.page {
+  min-height: calc(100vh - 200px);
+}
+
+.hero {
+  padding: $spacing-24 $spacing-6 $spacing-16;
+  background-color: var(--color-background-paper);
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: $spacing-4;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  font-family: var(--font-family-primary) !important;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  font-family: var(--font-family-primary) !important;
+}
+
+.content {
+  padding: $spacing-24 $spacing-6;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-8;
+}
+
+.serviceCard {
+  padding: $spacing-8;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: all var(--motion-duration-normal) var(--motion-easing-smooth);
+  font-family: var(--font-family-primary) !important;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: $spacing-4;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-primary) !important;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-primary) !important;
+  }
+}
+
+

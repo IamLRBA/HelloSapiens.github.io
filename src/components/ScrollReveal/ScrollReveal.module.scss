@@ -1,0 +1,40 @@
+@import '../../styles/tokens';
+
+// Ensure ScrollReveal and all children use Josefin Sans
+.scrollReveal,
+.scrollReveal * {
+  font-family: var(--font-family-primary);
+}
+
+.scrollReveal {
+  opacity: 0;
+  transition: opacity var(--motion-duration-slow) var(--motion-easing-smooth),
+    transform var(--motion-duration-slow) var(--motion-easing-smooth);
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: opacity var(--motion-duration-fast) var(--motion-easing);
+  }
+
+  &.up {
+    transform: translateY(30px);
+  }
+
+  &.down {
+    transform: translateY(-30px);
+  }
+
+  &.left {
+    transform: translateX(-30px);
+  }
+
+  &.right {
+    transform: translateX(30px);
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+

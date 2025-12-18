@@ -1,0 +1,51 @@
+/**
+ * SCSS Design Tokens
+ * 
+ * SCSS variables for use in stylesheets.
+ * These mirror the TypeScript tokens.
+ */
+
+// Colors
+$color-primary: #4696e5;
+$color-primary-light: #6ab0f0;
+$color-primary-dark: #2d7bc4;
+$color-secondary: #2c3e50;
+$color-text-primary: #1a1a1a;
+$color-text-secondary: #4a4a4a;
+$color-text-tertiary: #666666;
+$color-background: #fefefe;
+$color-background-paper: #fafafa;
+$color-border: #e6e6e6;
+
+// Typography - Josefin Sans only
+$font-family-primary: "Josefin Sans", sans-serif;
+$font-family-mono: "Courier New", Courier, monospace;
+
+// Spacing (4px base unit)
+$spacing-1: 0.25rem;  // 4px
+$spacing-2: 0.5rem;   // 8px
+$spacing-3: 0.75rem;  // 12px
+$spacing-4: 1rem;     // 16px
+$spacing-6: 1.5rem;   // 24px
+$spacing-8: 2rem;     // 32px
+$spacing-12: 3rem;    // 48px
+$spacing-16: 4rem;     // 64px
+$spacing-24: 6rem;    // 96px
+
+// Motion
+$motion-duration-fast: 150ms;
+$motion-duration-normal: 250ms;
+$motion-duration-slow: 350ms;
+$motion-easing: cubic-bezier(0.4, 0, 0.2, 1);
+$motion-easing-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+// Z-index
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-modal: 1050;
+
